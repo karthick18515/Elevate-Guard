@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flood Protection for Vehicles</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
+    <style>
+        body {
+          background-color:white;
+        }
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: #38444d;
+        }
+        
+        li {
+          float: left;
+        }
+        
+        li a, .dropbtn {
+          display: inline-block;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+        
+        li a:hover, .dropdown:hover .dropbtn {
+          background-color: red;
+        }
+        
+        li.dropdown {
+          display: inline-block;
+        }
+        
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f9f9f9;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+        
+        .dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+          text-align: left;
+        }
+        
+        .dropdown-content a:hover {background-color: #f1f1f1;}
+        
+        .dropdown:hover .dropdown-content {
+          display: block;
+        }
+        </style>
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="suggestions.html">Suggestions</a></li>
+            <li class="dropdown">
+              <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+              <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+              </div>
+            </li>
+          </ul>
+        <h1>Flood Protection for Vehicles</h1>
+    </header>
+    <main>
+        <div id="map"></div>
+        <div id="controls">
+            <input id="start" type="text" placeholder="Enter your location" />
+            <input id="radius" type="number" placeholder="Search radius in km" />
+            <button id="find-elevation">Find High Elevation</button>
+        </div>
+        <div id="directions"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Flood Protection for Vehicles</p>
+    </footer>
+</body>
+</html>
